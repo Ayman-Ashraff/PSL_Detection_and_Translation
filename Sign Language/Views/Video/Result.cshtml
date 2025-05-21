@@ -1,0 +1,25 @@
+@model Sign_Language.Models.VideoUpload
+
+@{
+    ViewData["Title"] = "Translation Result";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">Translation Result</h2>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <h4 class="alert-heading">Translated Text:</h4>
+                    <p class="mb-0">@Model.TranslatedText</p>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a asp-action="Upload" class="btn btn-primary">Upload Another Video</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

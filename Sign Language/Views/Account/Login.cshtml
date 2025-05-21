@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container vh-100 d-flex align-items-center justify-content-center">
+    <div class="row w-100 shadow rounded-4 overflow-hidden" style="max-width: 900px; background: #fff;">
+        <!-- Left: Login Form -->
+        <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+            <div class="mb-4">
+                <img src="~/images/logo.png" alt="PSL Translator" style="height: 32px;" class="mb-3" />
+                <h2 class="fw-bold mb-2">Sign in</h2>
+                <p class="text-muted mb-4">Please login to continue to your account.</p>
+            </div>
+            <form asp-action="Login" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group">
+                        <input type="password" id="password" name="password" class="form-control" required />
+                        <span class="input-group-text">
+                            <i class="bi bi-eye-slash" style="cursor:pointer;"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="keepLoggedIn" name="keepLoggedIn" />
+                    <label class="form-check-label" for="keepLoggedIn">
+                        Keep me logged in
+                    </label>
+                </div>
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                </div>
+            </form>
+            <div class="text-center mt-3">
+                <span>Need an account? <a asp-action="Register">Create one</a></span>
+            </div>
+        </div>
+        <!-- Right: Image -->
+        <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center p-0" style="background: #f5f7fa;">
+            <img src="~/images/recomnend-img.png" alt="Sign in visual" class="img-fluid" style="max-height: 400px; object-fit: cover;" />
+        </div>
+    </div>
+</div>

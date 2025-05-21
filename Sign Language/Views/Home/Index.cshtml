@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    html, body {
+        min-height: 100vh;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 50%, #fbc2eb 100%);
+        font-family: 'Poppins', Arial, sans-serif;
+    }
+</style>
+
+<div class="container-fluid min-vh-100 d-flex flex-column justify-content-center align-items-center">
+    <!-- Navbar -->
+    <div class="w-100 d-flex justify-content-between align-items-center pt-4 px-4">
+        <div>
+            <a asp-controller="Home" asp-action="Index" class="text-white fw-normal me-4 text-decoration-none border-bottom border-2 border-white pb-1">Home</a>
+            <a asp-controller="Account" asp-action="Login" class="text-white fw-normal me-4 text-decoration-none">Login</a>
+            <a asp-controller="Account" asp-action="Register" class="text-white fw-normal text-decoration-none">Signup</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row w-100 flex-grow-1 d-flex align-items-center justify-content-center">
+        <!-- Left: Welcome Text -->
+        <div class="col-12 col-md-6 d-flex flex-column align-items-start justify-content-center ps-md-5 pt-5 pt-md-0">
+            <div class="text-white" style="font-size: 2rem; font-weight: 300;">Welcome to</div>
+            <div class="text-white" style="font-size: 3rem; font-weight: 400; margin-bottom: 2rem;">Sign Language Transaltor</div>
+            <button class="btn btn-light rounded-pill px-4 py-2 fw-semibold shadow-sm">Home</button>
+        </div>
+        <!-- Right: Card/Image -->
+        <div class="col-12 col-md-6 d-flex align-items-center justify-content-center pt-5 pt-md-0">
+            <div class="bg-white rounded-4 shadow p-4 d-flex flex-column align-items-center" style="max-width: 350px; min-width: 300px;">
+                <img src="~/images/Screenshot 2025-05-14 at 00-15-59 Web sign language - signfordeaf.png" alt="SignForDeaf" class="img-fluid rounded mb-3" style="max-width: 100%; height: 180px; object-fit: cover;" />
+                <div class="d-flex align-items-center justify-content-center w-100 mt-2">
+                    <button class="btn btn-light rounded-circle me-2" style="width: 40px; height: 40px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#3a8dde" class="bi bi-play-fill" viewBox="0 0 16 16">
+                            <path d="M11.596 8.697l-6.363 3.692A.5.5 0 0 1 4 12.192V3.808a.5.5 0 0 1 .757-.429l6.363 3.692a.5.5 0 0 1 0 .858z" />
+                        </svg>
+                    </button>
+                    <input type="range" class="form-range" min="0" max="100" value="30" style="width: 70%;">
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                    <span class="rounded-circle bg-primary mx-1" style="width: 12px; height: 12px; display: inline-block; opacity: 0.7;"></span>
+                    <span class="rounded-circle bg-secondary mx-1" style="width: 12px; height: 12px; display: inline-block; opacity: 0.3;"></span>
+                    <span class="rounded-circle bg-secondary mx-1" style="width: 12px; height: 12px; display: inline-block; opacity: 0.3;"></span>
+                    <span class="rounded-circle bg-secondary mx-1" style="width: 12px; height: 12px; display: inline-block; opacity: 0.3;"></span>
+                    <span class="rounded-circle bg-secondary mx-1" style="width: 12px; height: 12px; display: inline-block; opacity: 0.3;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+@model Sign_Language.Models.User
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container vh-100 d-flex align-items-center justify-content-center">
+    <div class="row w-100 shadow rounded-4 overflow-hidden" style="max-width: 900px; background: #fff;">
+        <!-- Left: Register Form -->
+        <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+            <div class="mb-4">
+                <img src="~/images/logo.png" alt="PSL Translator" style="height: 32px;" class="mb-3" />
+                <h2 class="fw-bold mb-2">Register</h2>
+                <p class="text-muted mb-4">Create your account to get started.</p>
+            </div>
+            <form asp-action="Register" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="Username" class="form-label"></label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <div class="input-group">
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span class="input-group-text">
+                            <i class="bi bi-eye-slash" style="cursor:pointer;"></i>
+                        </span>
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="d-grid mb-3">
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </div>
+            </form>
+            <div class="text-center mt-3">
+                <span>Already have an account? <a asp-action="Login">Login here</a></span>
+            </div>
+        </div>
+        <!-- Right: Image -->
+        <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center p-0" style="background: #f5f7fa;">
+            <img src="~/images/left-images.jpg" alt="Register visual" class="img-fluid" style="max-height: 400px; object-fit: cover;" />
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -65,19 +65,16 @@ Run the application.
 🧪 Dataset
 We collected our own Pakistan Sign Language dataset consisting of video samples recorded manually. Due to the absence of a large public PSL dataset, this custom dataset played a crucial role in training and testing our models.
 
----
+```
+👥 Authors
+Developed by students at Punjab University College of Information Technology (PUCIT) under the supervision of Dr. Muhammad Farooq.
 
-## 👥 Authors
+Nabiha Hamid – BCSF21M026
 
-Developed by students at **Punjab University College of Information Technology (PUCIT)**  
-Under the supervision of **Dr. Muhammad Farooq**
+Ayman Ashraf – BCSF21M031
 
-- Nabiha Hamid – BCSF21M026  
-- Ayman Ashraf – BCSF21M031  
-- Maryam Rasool Qaisrani – BCSF21M055
+Maryam Rasool Qaisrani – BCSF21M055
 
----
-
-## 📄 License
-
-This project is for academic and research use only. Contact the authors for permission before reuse.
+📃 License
+This project is for academic and research purposes only.
+For reuse or citations, please contact the authors.
